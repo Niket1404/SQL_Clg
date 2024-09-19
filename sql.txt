@@ -1,0 +1,15 @@
+CREATE TABLE items_k (
+  item_id NUMBER(10),
+  item_name VARCHAR2(20),
+  price NUMBER(10,2),
+  qty NUMBER(10)
+);
+INSERT INTO items_k
+VALUES
+ (8, 'AC', 10000.00, 3);
+
+ SELECT * FROM items_k
+WHERE  item_name='mobile';
+DELETE FROM items_k
+WHERE qty=1;
+
