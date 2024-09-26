@@ -1,0 +1,65 @@
+Query :  Create department table
+CREATE TABLE Department_50 (
+    deptId INT PRIMARY KEY,
+    deptName VARCHAR(10)
+);
+Table created.
+
+Query: create an employee table with foreign key of deptId of departments table 
+CREATE TABLE Employee_50 (
+    empId INT PRIMARY KEY,
+    empName VARCHAR(50),
+    Email VARCHAR(100),
+    HireDate DATE,
+    Salary DECIMAL(10, 2),
+    deptId INT,
+    FOREIGN KEY (deptId) REFERENCES Department_54(deptId)
+);
+Table created.
+
+INSERT ALL
+INTO Employee_50 (empId, empName, Email, hireDate, salary, deptId) VALUES (7054, 'Niket', 'niket@gmail.com',to_date('12-01-2000','dd-mm-yyyy'), 1000, 50)
+INTO Employee_50 (empId, empName, Email, hireDate, salary, deptId) VALUES (7050, 'madhu', 'madhu@gmail.com', to_date('12-02-2000','dd-mm-yyyy'), 1000, 50)
+SELECT * FROM DUAL;
+
+INSERT INTO Employee_50 (empId, empName, Email, HireDate, Salary, deptId) VALUES (11, 'Laura King', 'laura.king@example.com', SYSDATE, 75000.00, 1);
+
+
+CREATE TABLE Department_AI (
+    deptId NUMBER PRIMARY KEY,
+    deptName VARCHAR2(20) NOT NULL
+);
+
+CREATE TABLE Employee_ai (
+    empId NUMBER PRIMARY KEY,
+    empName VARCHAR2(50) NOT NULL,
+    Email VARCHAR2(100),
+    HireDate DATE,
+    Salary NUMBER(10, 2),
+    deptId NUMBER,
+    FOREIGN KEY (deptId) REFERENCES Department_ai(deptId)
+);
+
+INSERT INTO Department_AI (deptId, deptName) VALUES (1, 'Research');
+INSERT INTO Department_AI (deptId, deptName) VALUES (2, 'Development');
+INSERT INTO Department_AI (deptId, deptName) VALUES (3, 'Marketing');
+INSERT INTO Department_AI (deptId, deptName) VALUES (4, 'Sales');
+INSERT INTO Department_AI (deptId, deptName) VALUES (5, 'Support');
+
+Query : insert multiple row in department table
+SQL > 
+
+INSERT ALL
+    INTO Department_AI (deptId, deptName) VALUES (6, 'Finance')
+    INTO Department_AI (deptId, deptName) VALUES (7, 'Human Resources')
+    INTO Department_AI (deptId, deptName) VALUES (8, 'IT Support')
+    INTO Department_AI (deptId, deptName) VALUES (9, 'Product Management')
+    INTO Department_AI (deptId, deptName) VALUES (10, 'Quality Assurance')
+SELECT * FROM DUAL;
+
+output: 
+ 5 rows inserted 
+
+
+
+
