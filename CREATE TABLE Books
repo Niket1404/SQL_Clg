@@ -1,0 +1,25 @@
+CREATE TABLE Books (
+    id INT PRIMARY KEY,           -- Unique identifier for each book
+    title VARCHAR2(255),          -- Title of the book (up to 255 characters)
+    author VARCHAR2(255),         -- Author's name (up to 255 characters)
+    genre VARCHAR2(100),          -- Genre of the book (up to 100 characters)
+    price DECIMAL(10, 2),         -- Price of the book (with 2 decimal places)
+    pub_year INT                  -- Publication year of the book (4-digit year)
+);
+INSERT INTO Books (id, title, author, genre, price, pub_year) 
+VALUES (1, 'The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction', 10.99, 1925);
+
+INSERT INTO Books (id, title, author, genre, price, pub_year) 
+VALUES (2, '1984', 'George Orwell', 'Dystopian', 15.99, 1949);
+
+INSERT INTO Books (id, title, author, genre, price, pub_year) 
+VALUES (3, 'To Kill a Mockingbird', 'Harper Lee', 'sci-fi', 12.99, 1960);
+SELECT * FROM Books;
+
+select genre from books;
+
+select distint genre from books;
+
+select count(*) from books;
+
+select count(*) fricition count from where genre ='fiction';
