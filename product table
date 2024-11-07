@@ -1,0 +1,22 @@
+CREATE TABLE Product_747054 (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR2(100),
+    Price DECIMAL(10, 2),
+    Category VARCHAR2(50)
+);
+INSERT INTO Product_747054 VALUES (1, 'Mouse', 25.99, 'Electronics');
+INSERT INTO Product_747054  VALUES (2, 'Speaker', 59.99, 'Electronics');
+INSERT INTO Product_747054  VALUES (3, 'Shoes', 89.99, 'Apparel');
+INSERT INTO Product_747054  VALUES (4, 'Smartwatch', 199.99, 'Electronics');
+INSERT INTO Product_747054  VALUES (5, 'Wallet', 39.99, 'Accessories');
+INSERT INTO Product_747054  VALUES (6, 'Mug', 12.99, 'Kitchenware');
+INSERT INTO Product_747054  VALUES (7, 'Headset', 79.99, 'Electronics');
+INSERT INTO Product_747054  VALUES (8, 'Kettle', 34.99, 'Kitchenware');
+INSERT INTO Product_747054  VALUES (9, 'Jacket', 120.00, 'Apparel');
+INSERT INTO Product_747054 VALUES (10, 'Charger', 15.99, 'Electronics');
+ 
+SELECT * FROM Product_747054;
+
+SELECT ProductName
+FROM Product
+WHERE Price > 100;
